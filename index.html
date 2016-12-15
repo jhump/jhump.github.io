@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Jhump.GitHub.io : Github page with overview of projects">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jhump.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jhump">View on GitHub</a>
+
+          <h1 id="project_title">Jhump.GitHub.io</h1>
+          <h2 id="project_tagline">Github page with overview of projects</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="crap-that-josh-built" class="anchor" href="#crap-that-josh-built" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Crap that Josh Built</h1>
+
+<p>This is an overview of the various things in my github account. I've experimented quite a lot with various kinds of libraries for Java. Since this is all done in my spare time, much of it is in an unfinished state. Some of it is more mature, and I hope it can be usable by others (if not now, then in the not-too-distant future).</p>
+
+<p>The list below is a tour of my repos.</p>
+
+<h3>
+<a id="bluegosling-alpha" class="anchor" href="#bluegosling-alpha" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://jhump.github.io/bluegosling">bluegosling</a> <em>alpha</em>
+</h3>
+
+<p>This is the largest repo here. It is a collection of libraries for Java with a very wide range of topics. Think of it as an extension to Google's <a href="https://github.com/google/guava">Guava</a>. It has undergone a lot of tumultuous changes, all in the name of making the organization sane and easier for usage outside of my "personal playground".</p>
+
+<ul>
+<li>There are few things here that, for various reasons, are <a href="https://github.com/google/guava/wiki/IdeaGraveyard">not being considered for Guava</a>. These include things like <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/tuples/Tuple.html">tuples</a>, <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/collections/immutable/PersistentCollection.html">persistent collections</a>, and operations like <code>Lists.filter</code> and <code>Sets.transform</code> (in the form of <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/collections/FilteringList.html">filtering</a> and <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/collections/TransformingSet.html">transforming</a> views).</li>
+<li>An <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/graph/package-summary.html">API</a> for describing complex computations as dependency graphs of steps, which can then be executed in a way that fully exploits possible parallelism.</li>
+<li>There are several concurrency packages here, too. They include new types of locks and synchronizers, a more feature-rich task scheduler than the standard <code>ScheduledExecutorService</code>, and an alternate <code>Future</code> <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/concurrent/fluent/package-summary.html">API</a> that tries to bridge the divide be a best-of-breed of Guava's <code>ListenableFuture</code> and the standard Java 8 <code>CompletionStage</code>.</li>
+<li>Implementations of thread-safe variables, called <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/concurrent/atoms/package-summary.html">atoms</a>. These are heavily inspired by Clojure's <a href="http://clojure.org/reference/vars">vars</a> and include implementations that are very similar to Clojure's dynamic vars (<code>ThreadLocalAtom</code>), refs (<code>TransactionalAtom</code>), agents (<code>AsynchronousAtom</code>), and atoms (<code>SimpleAtom</code>).</li>
+<li>There are numerous packages here for writing annotation processors.
+
+<ul>
+<li>
+<a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/apt/reflect/package-summary.html">APIs</a> for interacting with language models and type mirrors that feel more like core reflection than the <code>javax.lang.model</code> APIs.</li>
+<li>
+<a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/apt/testing/package-summary.html">Tools</a> for writing unit tests for an annotation processor.</li>
+<li>An implementation of the <code>javax.lang.model</code> interfaces backed by core reflection. This can be used to write reflective code once that can work both in the context of an annotation processor (backed by the compiler's processing environment) and also in a normal runtime context (backed by core reflection).</li>
+</ul>
+</li>
+<li>A <code>Result</code> <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/result/Result.html">API</a>, inspired by Rust's <a href="https://doc.rust-lang.org/std/result/">result</a> type.</li>
+<li>Numerous other packages and random utilities...</li>
+</ul>
+
+<h3>
+<a id="tru-reflect-unfinished" class="anchor" href="#tru-reflect-unfinished" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/jhump/tru-reflect">tru-reflect</a> <em>unfinished</em>
+</h3>
+
+<p>After making a <a href="https://jhump.github.io/bluegosling/javadoc/com/bluegosling/apt/reflect/package-summary.html">reflection-like API</a> for annotation processors, I decided that it would be fun to provide an API that <em>actually uses core reflection APIs</em>. It was also a good excuse to play with the ASM library.</p>
+
+<p>This library exposes <code>javax.lang.model</code> elements and type mirrors using familiar reflection types: <code>Class</code>, <code>Field</code>, <code>Method</code>, <code>Constructor</code>, etc. It does so by translating elements into synthetic classes. (It does not actually compile the source into a class. That would be too slow. The resulting class thus cannot be instantiated or used via reflection APIs like <code>Constructor.newInstance</code>, <code>Method.invoke</code>, or <code>Field.get</code>.)</p>
+
+<h3>
+<a id="hyper-redis-unfinished" class="anchor" href="#hyper-redis-unfinished" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/jhump/hyper-redis">hyper-redis</a> <em>unfinished</em>
+</h3>
+
+<p>At Square, we wrapped the <a href="https://github.com/xetorthio/jedis">Jedis</a> library, which is fairly low-level has some API peculiarities (mostly just straying from idiomatic Java), with a more user-friendly a safer API. This project is similar, but it does not wrap Jedis. It instead implements a redis client from scratch, using Netty for the networking components and relying heavily on code generation to provide an idiomatic Java API that provides high performance and type safety.</p>
+
+<h3>
+<a id="arquebus-unfinished" class="anchor" href="#arquebus-unfinished" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/jhump/arquebus">arquebus</a> <em>unfinished</em>
+</h3>
+
+<p>When I first tried to get my older son into programming, we talked about building a game. We started this project, but never finished it. I got to play a bit with Google's PlayN library and with JBox2D. It is not in a functioning state at the moment, due to some of the dependencies no longer being available in Maven Central. I'm currently working on fixing it up and changing it to use the latest PlayN (2.0). Slow and steady...</p>
+
+<h3>
+<a id="midi-compozer" class="anchor" href="#midi-compozer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/jhump/midi-compozer">midi-compozer</a>
+</h3>
+
+<p>This is a music composition program. I've been using it for quite some time to create MIDI files for music that I've written. Warning: it was written for DOS. So you'll have to use <a href="http://www.dosbox.com/">DOSBox</a> to get it to run. And it's user interface is all keyboard driven, so has a steep learning curve.</p>
+
+<p>Another warning: this is a really hideous bag of C code that I wrote in college, about 20 years ago. (But at least it works!)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
