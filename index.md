@@ -20,6 +20,9 @@ This is the largest repo here. It is a collection of libraries for Java with a v
 * A `Result` [API](https://jhump.github.io/bluegosling/javadoc/com/bluegosling/result/Result.html), inspired by Rust's [result](https://doc.rust-lang.org/std/result/) type.
 * Numerous other packages and random utilities...
 
+### [artificer](https://github.com/jhump/artificer)
+A small library that can make annotations more powerful. It consists of an annotation processor that can generate builder classes for your annotations, for using them as value types. It can also generated "bridges", which are a parallel API to your annotations that greatly simplify the implementation of annotation processors for your annotations.
+
 ### [tru-reflect](https://github.com/jhump/tru-reflect) *unfinished*
 After making a [reflection-like API](https://jhump.github.io/bluegosling/javadoc/com/bluegosling/apt/reflect/package-summary.html) for annotation processors, I decided that it would be fun to provide an API that *actually uses core reflection APIs*. It was also a good excuse to play with the ASM library.
 
