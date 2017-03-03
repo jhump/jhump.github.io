@@ -32,7 +32,7 @@ A small library that can make annotations more powerful. It consists of an annot
 ----
 
 ![ProtoReflect](/images/protoreflect.png)
-### [Protoreflect](https://github.com/jhump/tru-reflect) *alpha*
+### [protoreflect](https://github.com/jhump/protoreflect) *alpha*
 This is a Go library that provides rich "descriptors", for reflection on protocol buffer messages and language elements. It also provides a GRPC reflection client, for accessing descriptors for remote GRPC services.
 
 ----
