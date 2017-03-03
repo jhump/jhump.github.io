@@ -6,6 +6,9 @@ This is an overview of the various things in my github account. I've experimente
 
 Below is a tour of my repos.
 
+----
+
+![Blue Gosling](/images/bluegosling.png)
 ### [bluegosling](https://jhump.github.io/bluegosling) *alpha*
 This is the largest repo here. It is a collection of libraries for Java with a very wide range of topics. Think of it as an extension to Google's [Guava](https://github.com/google/guava). It has undergone a lot of tumultuous changes, all in the name of making the organization sane and easier for usage outside of my "personal playground".
 
@@ -22,11 +25,19 @@ This is the largest repo here. It is a collection of libraries for Java with a v
 
 ----
 
+![Artificer](/images/artificer.png)
 ### [artificer](https://github.com/jhump/artificer)
 A small library that can make annotations more powerful. It consists of an annotation processor that can generate builder classes for your annotations, for using them as value types. It can also generated "bridges", which are a parallel API to your annotations that greatly simplify the implementation of annotation processors for your annotations.
 
 ----
 
+![ProtoReflect](/images/protoreflect.png)
+### [Protoreflect](https://github.com/jhump/tru-reflect) *alpha*
+This is a Go library that provides rich "descriptors", for reflection on protocol buffer messages and language elements. It also provides a GRPC reflection client, for accessing descriptors for remote GRPC services.
+
+----
+
+![Tru-Reflect](/images/tru-reflect.png)
 ### [tru-reflect](https://github.com/jhump/tru-reflect) *unfinished*
 After making a [reflection-like API](https://jhump.github.io/bluegosling/javadoc/com/bluegosling/apt/reflect/package-summary.html) for annotation processors, I decided that it would be fun to provide an API that *actually uses core reflection APIs*. It was also a good excuse to play with the ASM library.
 
@@ -34,16 +45,21 @@ This library exposes `javax.lang.model` elements and type mirrors using familiar
 
 ----
 
+![Hyper-Redis](/images/hyper-redis.png)
 ### [hyper-redis](https://github.com/jhump/hyper-redis) *unfinished*
 At Square, we wrapped the [Jedis](https://github.com/xetorthio/jedis) library, which is fairly low-level has some API peculiarities (mostly just straying from idiomatic Java), with a more user-friendly a safer API. This project is similar, but it does not wrap Jedis. It instead implements a redis client from scratch, using Netty for the networking components and relying heavily on code generation to provide an idiomatic Java API that provides high performance and type safety.
 
 ----
 
+![Arquebus](/images/arquebus.png)
 ### [arquebus](https://github.com/jhump/arquebus) *unfinished*
-When I first tried to get my older son into programming, we talked about building a game. We started this project, but never finished it. I got to play a bit with Google's PlayN library and with JBox2D. It is not in a functioning state at the moment, due to some of the dependencies no longer being available in Maven Central. I'm currently working on fixing it up and changing it to use the latest PlayN (2.0). Slow and steady...
+When I first tried to get my older son into programming, we talked about building a game. We started this project, but never finished it. I got to play a bit with Google's PlayN library and with JBox2D.
+
+I've most recently updated it to use PlayN 2.0 -- a necessity since some of the dependencies for earlier versions are no longer available in Maven Central). At the moment, is little more than a proof-of-concept. There is no real gameplay, no enemies, and no levels... yet.
 
 ----
 
+![MIDI Compozer](/images/midi-compozer.png)
 ### [midi-compozer](https://github.com/jhump/midi-compozer)
 This is a music composition program. I've been using it for quite some time to create MIDI files for music that I've written. Warning: it was written for DOS. So you'll have to use [DOSBox](http://www.dosbox.com/) to get it to run. And it's user interface is all keyboard driven, so has a steep learning curve.
 
