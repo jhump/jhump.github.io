@@ -263,13 +263,22 @@ Full-Width Styles
   top:0;
   right: 10px;
   z-index: 10;
-  padding: 10px 50px 10px 10px;
+  padding: 12px 10px 10px 10px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: #d02020;
+  background: -moz-linear-gradient(-25deg, #d04000, #d00060);
+  background: -webkit-linear-gradient(-25deg, #d04000, #d00060);
+  background: -ms-linear-gradient(-25deg, #d04000, #d00060);
+  background: -o-linear-gradient(-25deg, #d04000, #d00060);
+  background: linear-gradient(-25deg, #d04000, #d00060);
   font-weight: 700;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 1px 1px 10px #000;
+}
+
+img.octocat {
+    vertical-align: middle;
+    padding-left: 12px;
 }
 
 #header_wrap {
