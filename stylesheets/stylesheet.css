@@ -276,6 +276,11 @@ Full-Width Styles
   box-shadow: 1px 1px 10px #000;
 }
 
+img.octocat {
+    vertical-align: middle;
+    padding-left: 12px;
+}
+
 #header_wrap {
   background: #203450;
   background: -moz-linear-gradient(-48deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
