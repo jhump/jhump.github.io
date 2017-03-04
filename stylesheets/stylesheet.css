@@ -287,7 +287,7 @@ img.octocat {
   background: -webkit-linear-gradient(-48deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
   background: -ms-linear-gradient(-48deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
   background: -o-linear-gradient(-48deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
-  background: linear-gradient(-48deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
+  background: linear-gradient(132deg, #212137, #21376E, #213760, #12183D, #370021, #280012, #000);
 }
 
 #header_wrap .inner {
