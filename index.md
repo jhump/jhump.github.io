@@ -55,7 +55,7 @@ At Square, we wrapped the [Jedis](https://github.com/xetorthio/jedis) library, w
 ### [arquebus](https://github.com/jhump/arquebus) *unfinished*
 When I first tried to get my older son into programming, we talked about building a game. We started this project, but never finished it. I got to play a bit with Google's PlayN library and with JBox2D.
 
-I've most recently updated it to use PlayN 2.0 -- a necessity since some of the dependencies for earlier versions are no longer available in Maven Central). At the moment, is little more than a proof-of-concept. There is no real gameplay, no enemies, and no levels... yet.
+I've most recently upgraded it to use PlayN 2.0 (a necessity since some of the dependencies for earlier versions of PlayN are no longer available in Maven Central). At the moment, it is little more than a proof-of-concept. There is no real gameplay, no enemies, no levels, no finished graphics/sprites, etc. At least not yet...
 
 ----
 
