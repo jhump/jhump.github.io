@@ -27,13 +27,13 @@ This is the largest repo here. It is a collection of libraries for Java with a v
 
 ![Artificer](/images/artificer.png)
 ### [artificer](https://github.com/jhump/artificer)
-A small library that can make annotations more powerful. It consists of an annotation processor that can generate builder classes for your annotations, for using them as value types. It can also generated "bridges", which are a parallel API to your annotations that greatly simplify the implementation of annotation processors for your annotations.
+A small library that can make annotations more powerful. It consists of an annotation processor that can generate builder classes for your annotations, for using them as value types. It can also generate "bridges", which are a parallel API to your annotations that greatly simplify the implementation of annotation processors for your annotations.
 
 ----
 
 ![ProtoReflect](/images/protoreflect.png)
-### [protoreflect](https://github.com/jhump/protoreflect) *alpha*
-This is a Go library that provides rich "descriptors", for reflection on protocol buffer messages and language elements. It also provides a GRPC reflection client, for accessing descriptors for remote GRPC services.
+### [protoreflect](https://github.com/jhump/protoreflect)
+This is a Go library that provides rich "descriptors", for reflection on [protocol buffer](https://developers.google.com/protocol-buffers/) messages and language elements. It also provides a [GRPC](http://www.grpc.io/) [reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) client, for accessing descriptors for remote GRPC services.
 
 ----
 
