@@ -266,14 +266,15 @@ Full-Width Styles
   padding: 12px 10px 10px 10px;
   color: #fff;
   background: #d02020;
-  background: -moz-linear-gradient(-25deg, #d04000, #d00060);
-  background: -webkit-linear-gradient(-25deg, #d04000, #d00060);
-  background: -ms-linear-gradient(-25deg, #d04000, #d00060);
-  background: -o-linear-gradient(-25deg, #d04000, #d00060);
-  background: linear-gradient(-25deg, #d04000, #d00060);
+  background: -moz-linear-gradient(-25deg, #e84000, #d00060);
+  background: -webkit-linear-gradient(-25deg, #e84000, #d00060);
+  background: -ms-linear-gradient(-25deg, #e84000, #d00060);
+  background: -o-linear-gradient(-25deg, #e84000, #d00060);
+  background: linear-gradient(115deg, #e84000, #d00060);
   font-weight: 700;
   border-radius: 0 0 12px 12px;
   box-shadow: 1px 1px 10px #000;
+  text-shadow: #888 -1px -1px 1px;
 }
 
 img.octocat {
